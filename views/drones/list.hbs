@@ -1,1 +1,10 @@
 <h2>Available drones</h2>
+<a href="drones/create">Add new drone</a>
+
+<ul>
+{{#each drones}}
+<li>Name: {{name}}</li>
+<li>propellers: {{propellers}}</li>
+<li>Max speed: {{maxSpeed}}</li>
+{{/each}}
+</ul>
