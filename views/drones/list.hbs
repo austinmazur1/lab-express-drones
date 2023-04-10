@@ -6,5 +6,10 @@
 <li>Name: {{name}}</li>
 <li>propellers: {{propellers}}</li>
 <li>Max speed: {{maxSpeed}}</li>
+<a href="/drones/{{this._id}}/edit" class="href">Update</a>
+
+<form action="drones/{{this._id}}/delete" method="post">
+<button type="submit">Delete</button>
+</form>
 {{/each}}
 </ul>
