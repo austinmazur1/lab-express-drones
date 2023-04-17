@@ -1,15 +1,26 @@
-<h2>Available drones</h2>
-<a href="drones/create">Add new drone</a>
+<div class="bg-blue-500 py-10 text-center">
+    <h1 class="text-white text-5xl">{{title}}</h1>
+    <p class="text-white text-lg">Available drones</p>
+</div>
 
-<ul>
-{{#each drones}}
-<li>Name: {{name}}</li>
-<li>propellers: {{propellers}}</li>
-<li>Max speed: {{maxSpeed}}</li>
-<a href="/drones/{{this._id}}/edit" class="href">Update</a>
+<div class="container mx-auto my-10">
+    <a href="drones/create" class="bg-blue-500 text-white py-2 px-4 rounded-lg mb-5 inline-block">Add new drone</a>
 
-<form action="drones/{{this._id}}/delete" method="post">
-<button type="submit">Delete</button>
-</form>
-{{/each}}
-</ul>
+    <ul class="space-y-5">
+        {{#each drones}}
+        <li>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <h2 class="text-2xl font-bold mb-2">{{name}}</h2>
+                <p>Propellers: {{propellers}}</p>
+                <p>Max speed: {{maxSpeed}}</p>
+                <div class="mt-5 flex justify-end">
+                    <a href="/drones/{{this._id}}/edit" class="text-blue-500 mr-3">Update</a>
+                    <form action="drones/{{this._id}}/delete" method="post">
+                        <button type="submit" class="bg-red-500 text-white py-1 px-3 rounded-lg">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>

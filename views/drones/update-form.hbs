@@ -1,15 +1,22 @@
-<h2>Update the drone</h2>
+<div class="container mx-auto my-10">
+    <h2 class="text-2xl mb-5">Update the drone</h2>
 
-<form action="/drones/{{currentDrone._id}}/edit" method="post">
-  <label for="name">Name
-    <input type="text" name="name" id="name" placeholder="{{currentDrone.name}}"/>
-  </label>
-  <label for="propellers">Propellers
-    <input type="number" name="propellers" id="propellers" placeholder="{{currentDrone.propellers}}"/>
-  </label>
-  <label for="maxSpeed">Max maxSpeed
-    <input type="number" name="maxSpeed" id="maxSpeed" placeholder="{{currentDrone.maxSpeed}}"/>
-  </label>
+    <form action="/drones/{{currentDrone._id}}/edit" method="post" class="bg-gray-100 p-5 rounded-lg">
+        <div class="mb-5">
+            <label for="name" class="block font-bold mb-2">Name</label>
+            <input type="text" name="name" id="name" class="border rounded-lg py-2 px-3 w-full" placeholder="{{currentDrone.name}}" />
+        </div>
 
-  <button type="submit">Update</button>
-</form>
+        <div class="mb-5">
+            <label for="propellers" class="block font-bold mb-2">Propellers</label>
+            <input type="number" name="propellers" id="propellers" class="border rounded-lg py-2 px-3 w-full" placeholder="{{currentDrone.propellers}}" />
+        </div>
+
+        <div class="mb-5">
+            <label for="maxSpeed" class="block font-bold mb-2">Max speed</label>
+            <input type="number" name="maxSpeed" id="maxSpeed" class="border rounded-lg py-2 px-3 w-full" placeholder="{{currentDrone.maxSpeed}}" />
+        </div>
+
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg">Update</button>
+    </form>
+</div>
